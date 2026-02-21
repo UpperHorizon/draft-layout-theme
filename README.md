@@ -1,4 +1,4 @@
-# Draft Layout Theme
+# Draft Layout Starter Theme
 
 Draft Layout's Visual Editor is a WordPress plugin that allows you to build sites faster with Tailwind and HTML code, while letting clients edit those same styles in a visual drag-and-drop site builder.
 
