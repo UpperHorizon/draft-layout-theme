@@ -1,0 +1,30 @@
+/* Required: this file needs to exist and you need to @import Tailwind here */
+@import 'tailwindcss';
+
+/* If you want to include any other custom CSS, best not to put it here; instead put it inside `style.css` */
+/* Also, don't enqueue this file with `wp_enqueue_style()`. Instead enqueue `tw-output.css` which will have all generated Tailwind styles */
+
+/* Optional: specify your own custom design tokens (colors, spacing, fonts, etc.) inside an @theme {...} block */
+@theme {
+  /* Color */
+  --color-custom: #ffffff;
+
+  /* Spacing */
+  --spacing-custom: 1rem;
+  
+  /* Border radius */
+  --radius-custom: 1rem;
+  
+  /* Font size */
+  --text-custom: 1rem;
+  
+  /* Font family */
+  --font-sans: "Outfit", sans-serif;
+  --font-serif: "Aleo", serif;
+  
+  /* Font weight */
+  --font-weight-custom: 950;
+
+  /* Breakpoint */
+  --breakpoint-tab: 25rem;
+}
