@@ -6,4 +6,4 @@ This is a starter boilerplate/template for building WordPress themes with this V
 
 Check out the Technical Guide for more details:
 
-[http://draftlayout.com/editor-guide]
+https://draftlayout.com/editor-guide
