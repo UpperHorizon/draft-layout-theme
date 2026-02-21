@@ -8,14 +8,14 @@ add_action('wp_enqueue_scripts', function () {
 	);
 
 	wp_enqueue_style(
-		'dl-theme-tw',
+		'dl-theme-css',
 		get_parent_theme_file_uri('style.css'),
 	);
 });
 
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
-add_theme_support('post-formats', array('aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'));
+add_theme_support('post-formats', ['aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video']);
 
 // Inside templates (single.php, index.php), we want to style the post image by adding classes
 // like `the_post_thumbnail('large', ['class' => 'rounded-xl']);`
