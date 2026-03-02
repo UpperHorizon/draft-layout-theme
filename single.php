@@ -22,32 +22,35 @@ get_header();
   <?php while (have_posts()):
     the_post(); ?>
 
-    <article id="post-<?php the_ID(); ?>" class="<?php echo esc_attr(join(' ', get_post_class())) ?>">
-      <h1 class="text-6xl font-bold font-serif mb-4">
-        <?php /* dl-preview: Example Post Title */ echo esc_html(get_the_title()); ?>
-      </h1>
+  <article id="post-<?php the_ID(); ?>" class="<?php echo esc_attr(join(' ', get_post_class())) ?>">
+    <h1 class="text-6xl font-bold font-serif mb-4">
+      <?php /* dl-preview: Example Post Title */ echo esc_html(get_the_title()); ?>
+    </h1>
 
-      <p class="text-lg mb-5">
-        Posted on
-        <span class="text-slate-500">
-          <?php /* dl-preview: example date */ echo get_the_date(); ?>
-        </span>
-        by
-        <span class="text-slate-500">
-          <?php /* dl-preview: Example Author */ the_author(); ?>
-        </span>
-      </p>
+    <p class="text-lg mb-5">
+       Posted on 
 
-      <?php if (has_post_thumbnail()): ?>
-        <div class="mb-5">
-          <?php /* dl-preview: [img] Post Thumbnail Image */ the_post_thumbnail('large', get_post_image_args('rounded-xl')); ?>
-        </div>
-      <?php endif; ?>
+      <span class="text-slate-500">
+        <?php /* dl-preview: example date */ echo get_the_date(); ?>
+      </span>
 
-      <div class="text-lg space-y-4">
-        <?php /* dl-preview: Example Post Content */ the_content(); ?>
-      </div>
-    </article>
+       by 
+
+      <span class="text-slate-500"><?php /* dl-preview: Example Author */ the_author(); ?></span>
+    </p>
+
+    <?php if (has_post_thumbnail()): ?>
+
+    <div class="mb-5">
+      <?php /* dl-preview: [img] Post Thumbnail Image */ the_post_thumbnail('large', ['class' => 'rounded-xl']); ?>
+    </div>
+
+    <div class="text-lg space-y-4">
+      <?php /* dl-preview: Example Post Content */ the_content(); ?>
+    </div>
+
+    <?php endif; ?>
+  </article>
 
   <?php endwhile; ?>
 </main>

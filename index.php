@@ -35,7 +35,7 @@ get_header();
           <a href="<?php the_permalink(); ?>">
             <?php if (has_post_thumbnail()): ?>
               <div class="mb-4">
-                <?php /* dl-preview: [img] Post Thumbnail Image */ the_post_thumbnail('medium', get_post_image_args('rounded-xl w-full')); ?>
+                <?php /* dl-preview: [img] Post Thumbnail Image */ the_post_thumbnail('medium', ['class' => 'rounded-xl w-full']); ?>
               </div>
             <?php endif; ?>
 
